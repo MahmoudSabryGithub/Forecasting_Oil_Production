@@ -12,7 +12,7 @@ import joblib
 import numpy as np
 
 model = joblib.load('Virtual.pkl')
-st.title("RB-B8 gross flow")
+st.title("RB-B8 Production Forcasting")
 
 Freq = st.slider("Status-Hz[Hz]", 30, 70)
 PIP = st.slider("Press-Pump Intake (Pi)[psi]", 1000 , 3500)
