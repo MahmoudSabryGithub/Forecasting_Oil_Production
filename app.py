@@ -14,13 +14,13 @@ import numpy as np
 model = joblib.load('Virtual.pkl')
 st.title("RB-B8 gross flow")
 
-Freq = st.slider("Status-Hz[Hz]", 0, 150)
-PIP = st.slider("Press-Pump Intake (Pi)[psi]", 50 , 10000)
-Tm = st.slider("Temp-Motor[degF]", 0 , 500)
-Vx = st.slider("Vib-Pump X axis[G]", 0 ,10)
+Freq = st.slider("Status-Hz[Hz]", 30, 70)
+PIP = st.slider("Press-Pump Intake (Pi)[psi]", 1000 , 3500)
+Tm = st.slider("Temp-Motor[degF]", 100 , 350)
+Vx = st.slider("Vib-Pump X axis[G]", 0 ,5,0.1)
 Vy = st.slider("Vib-Pump Y axis[G]", 0 ,10)
-PDP = st.slider("Press-Pump Discharge[psi]", 0 ,10000)
-Motor_Amps = st.slider("Pwr-Motor Amps Ph B[A]", 0 ,150)
+PDP = st.slider("Press-Pump Discharge[psi]", 1000 ,4500)
+Motor_Amps = st.slider("Pwr-Motor Amps Ph B[A]", 0 ,80)
 
 if st.button("Predict"):
     X_new = np.array([[Freq,PIP,Tm,Vx,Vy,PDP,Motor_Amps]])
