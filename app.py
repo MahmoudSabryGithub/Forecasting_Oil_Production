@@ -25,4 +25,4 @@ Motor_Amps = st.slider("Pwr-Motor Amps Ph B[A]", 0 ,150)
 if st.button("Predict"):
     X_new = np.array([[Freq,PIP,Tm,Vx,Vy,PDP,Motor_Amps]])
     prediction = model.predict(X_new)[0]
-    st.success(f"Predicted flow: prediction")
+    st.success(f"Predicted flow: {prediction:,.2f}")
