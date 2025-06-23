@@ -14,7 +14,7 @@ import numpy as np
 model = joblib.load('Virtual.pkl')
 st.title("Virtual flow")
 
-Freq = st.slider("Status-Hz[Hz]", 0.0, 150)
+Freq = st.slider("Status-Hz[Hz]", 0, 150)
 PIP = st.slider("Press-Pump Intake (Pi)[psi]", 50 , 10000)
 Tm = st.slider("Temp-Motor[degF]", 0 , 500)
 Vx = st.slider("Vib-Pump X axis[G]", 0 ,10)
