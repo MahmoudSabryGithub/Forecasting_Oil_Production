@@ -20,7 +20,7 @@ Tm = st.slider("Temp-Motor[degF]", 100 , 350)
 Vx = st.slider("Vib-Pump X axis[G]", 0.0 ,5.0, step=0.1)
 Vy = st.slider("Vib-Pump Y axis[G]", 0.0 ,5.0, step=0.1)
 PDP = st.slider("Press-Pump Discharge[psi]", 1000 ,4500)
-Motor_Amps = st.slider("Pwr-Motor Amps Ph B[A]", 0 ,80)
+Motor_Amps = st.slider("Pwr-Motor Amps Ph B[A]", 10 ,80)
 
 if st.button("Predict"):
     X_new = np.array([[Freq,PIP,Tm,Vx,Vy,PDP,Motor_Amps]])
